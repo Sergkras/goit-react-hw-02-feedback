@@ -8,7 +8,8 @@ export class Increment extends Component {
           this.props.onClick();
         }}
       >
-        {this.props.name}
+        кнопка
+
       </button>
     );
   }
