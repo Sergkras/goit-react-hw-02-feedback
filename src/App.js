@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { Component } from "react";
+import { Counter } from "./Counter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+ state = {
+  good: 0,
+  neutral: 0,
+  bad: 0
 }
+
+  incrementVote = (vote) => () => {
+    this.setState({ [vote ]: this.state[vote ] + 1 });
+
+  };
+
+  render() {
+    const { good, neutral, bad } = this.state;
+    return (
+      <div>
+
+        <h1> Please leave feedback { good + neutral + bad } </h1>
+        <Counter
+          count={good}
+          onIncrement={this.incrementVote("good")}
+          name="good"
+        />
+        <Counter
+          count={neutral}
+          onIncrement={this.incrementVote("neutral")}
+          name="neutral"
+        />
+        <Counter
+          count={bad}
+          onIncrement={this.incrementVote("bad")}
+          name= "bad"
+        />
+      </div>
+    );
+  }
+}
+
 
 export default App;

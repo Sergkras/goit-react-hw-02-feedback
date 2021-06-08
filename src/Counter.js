@@ -5,9 +5,9 @@ export class Counter extends Component {
   render() {
     return (
       <div>
-        <h1>
+        <h2>
           {this.props.name} {this.props.count}
-        </h1>
+        </h2>
         <div>
           <Increment onClick={this.props.onIncrement} />
         </div>
@@ -17,5 +17,5 @@ export class Counter extends Component {
 }
 
 Counter.defaultProps = {
-  name: "Banana 🍌",
+  name: "Banana",
 };
