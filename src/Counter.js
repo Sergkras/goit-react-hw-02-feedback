@@ -17,5 +17,5 @@ export class Counter extends Component {
 }
 
 Counter.defaultProps = {
-  name: "Banana",
+  name: "0",
 };
