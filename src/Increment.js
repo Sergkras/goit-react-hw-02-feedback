@@ -1,7 +1,5 @@
 import { Component } from "react";
 
-
-
 export class Increment extends Component {
   render() {
     return (
@@ -10,9 +8,11 @@ export class Increment extends Component {
           this.props.onClick();
 
         }}
-      >
-       Your vote
+
+      >Your vote
+
       </button>
+
     );
   }
 }
