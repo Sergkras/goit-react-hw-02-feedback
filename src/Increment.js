@@ -6,13 +6,9 @@ export class Increment extends Component {
       <button
         onClick={() => {
           this.props.onClick();
-
+          console.log(this.props.name)
         }}
-
-      >Your vote
-
-      </button>
-
+      >{this.props.name}</button>
     );
   }
 }

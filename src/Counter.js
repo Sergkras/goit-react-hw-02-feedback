@@ -9,7 +9,7 @@ export class Counter extends Component {
           {this.props.name} {this.props.count}
         </h2>
         <div>
-          <Increment onClick={this.props.onIncrement} />
+          <Increment name={this.props.name} onClick ={this.props.onIncrement} />
         </div>
       </div>
     );
